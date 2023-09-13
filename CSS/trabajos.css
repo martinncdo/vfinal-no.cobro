@@ -1,0 +1,695 @@
+/* RESET CSS */
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+/* Mis estilos */
+
+:root {
+    --neue-font: 'Neue Haas Grotesk Display Pro', sans-serif;
+    --akira-font: 'Akira Expanded', sans-serif;
+}
+
+@font-face {
+    font-family: 'Akira-tildes';
+    src: url(../img/akira-expanded-bold.ttf);
+}
+
+.red {
+    color: red;
+}
+
+/* Barra de navegación */
+
+.navb {
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+
+.navb .logo {
+    font-family: var(--akira-font);
+    color: white;
+    background-color: white;
+    color: black;
+    margin-left: 1rem;
+    padding: 0 .5rem;
+}
+
+.panel {
+    display: none;
+}
+
+.navb ol {
+    font-family: var(--neue-font);
+    font-size: .9rem;
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    top: .5rem;
+}
+
+ol > * {
+    list-style: none;
+    margin-right: 1rem!important;
+}
+
+.navb ol > *:hover {
+    opacity: .6;
+    transition: all .4s ease;
+}
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    width: 100%;
+    height: 7rem;
+    font-family: var(--neue-font);
+    font-size: .8rem;
+}
+
+.redes-sociales .redes {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redes i {
+    margin-right: 1rem;
+}
+
+/* Opciones */
+
+.barra-opciones {
+    position: fixed;
+    top: 3rem;
+    z-index: 10;
+    color: white;
+    font-family: var(--neue-font);
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.secciones li {
+    font-size: .8rem;
+}
+
+.secciones li:hover {
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+/* Sección Intercambios */
+
+.btn-entrevistas:hover {
+    color: white;
+    border-color: black;
+    transition: all .5s;
+}
+
+.contenedor-margin {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.intercambios-hero-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/pasto-persona.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.presentacion {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 1rem;
+    color: white;
+    font-family: var(--neue-font);
+}
+
+.titulo {
+    color: white;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 1rem;
+    z-index: 3;
+    font-family: 'Akira-tildes';
+}
+
+.titulo .barra {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-right: .5rem;
+    font-family: var(--neue-font);
+}
+
+.texto > * {
+    font-size: 1rem;
+}
+
+.presentacion p {
+    font-size: .9rem;
+}
+
+.btn-entrevistas {
+    outline: none;
+    text-decoration: none;
+    font-family: var(--neue-font);
+    color: white;
+    padding: .5rem;
+    border: thin solid white;
+    background-color: rgba(0, 0, 0, .6);
+    font-size: .8rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Entrevistas */
+
+.entrevistas {
+    width: 60%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-entrevista {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    display: flex;
+    height: 250px;
+    background-color: rgb(0, 0, 0);
+}
+
+.tarjeta-entrevista:hover {
+    transform: scale(1.01);
+    transition: all .3s;
+}
+
+
+.foto-entrevista {
+    flex-basis: 55%;
+    background-image: url(../img/);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.foto-entrevista img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.descripcion-entrevista {
+    flex-basis: 45%;
+    color: rgb(255, 255, 255);
+    font-family: var(--neue-font);
+}
+
+
+.descripcion-entrevista .titulo-entrevista,
+.detalles,
+.descripcion-entrevistado,
+.redes-entrevista,
+.link-yt,
+.descripcion-entrevista hr {
+    font-family: var(--neue-font);
+    margin-left: 1rem;
+}
+
+.titulo-entrevista {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.detalles {
+    font-size: .8rem;
+}
+
+.descripcion-entrevistado {
+    font-size: .9rem;
+}
+
+.redes-entrevista p {
+    font-size: .8rem;
+    margin-bottom: .3rem;
+}
+
+.redes-entrevista 
+ol,
+li {
+    padding: 0;
+}
+
+.redes-entrevista ol i{
+    margin-right: 0 !important;
+}
+
+.link-yt {
+    font-size: .8rem;
+    margin-left: 4rem;
+}
+
+.redes-entrevista .redes ol i:hover {
+    color: red;
+    transition: all .5s ease;
+}
+
+.link-yt:hover {
+    opacity: .6;
+    transition: all .5s ease;
+}
+
+/* Sección Cortometrajes */
+
+.hero-cortos {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/hero-image-intercambios.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tarjeta-galeria {
+    background-color: rgb(0, 0, 0);
+    margin: 2rem 0;
+    width: 50%;
+}
+
+.primer-tarjeta {
+    margin-top: 5rem!important;
+}
+
+.ultima-tarjeta {
+    margin-bottom: 5rem!important;
+}
+
+.tarjeta-galeria video,
+.tarjeta-galeria iframe {
+    position: absolute;
+    top: 5;
+    left: 5;
+    width: 100%;
+    height: 100%;
+}
+
+.material-galeria {
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 40%;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.descripcion-galeria {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: var(--neue-font);
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+.redes-galeria ol, 
+.redes-galeria li,
+.redes-galeria p,
+.redes-galeria i {
+    padding: 0;
+    margin: 0;
+}
+
+.redes-galeria i {
+    color: black;
+    margin: 0;
+    margin-left: .5rem;
+}
+
+.link-galeria {
+    color: black;
+}
+
+.link-galeria:hover {
+    opacity: .8;
+    transition: all .3s ease;
+}
+
+/* Página del Formulario */
+
+
+.contact-form-loader {
+    text-align: center!important;
+}
+
+.contact-form-response {
+    text-align: center;
+    display: block;
+}
+
+.formulario {
+    background-image: url(../img/faro.webp);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    color: white;
+    font-family: var(--neue-font);
+    margin: 1rem .5rem;
+    padding: .5rem;
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contenedor-form {
+    background-color: rgba(0, 0, 0, .6);
+    padding: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    margin-bottom: 4rem;
+}
+
+.contenedor-form form {
+    width: 70%;
+}
+
+form {
+    font-family: var(--neue-font);
+    color: white;
+    font-size: .9rem;
+}
+
+input:focus {
+    transition: all .5s ease;
+    outline: none;
+}
+
+textarea:focus {
+    transition: all .5s ease;
+}
+
+form input {
+    border: none;
+    border-bottom: thin solid white;
+    background: none;
+    color: white;
+    padding: .5rem;
+}
+
+input::placeholder {
+    color: white;
+    opacity: .7;
+}
+
+form textarea {
+    padding: .5rem;
+    background: none;
+    color: white;
+    border-color: white;
+}
+
+textarea::placeholder {
+    color: white;
+    opacity: .7;
+}
+
+form::placeholder {
+    color: white;
+}
+
+.fila1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.fila2, .fila3 {
+    margin-bottom: 2rem;
+}
+
+.input-full {
+    width: 100%;
+}
+
+
+.btn-enviar {
+    font-weight: 300;
+}
+
+.btn-enviar:hover {
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+.none {
+    display: none;
+  }
+
+/* A N I M A C I O N E S  */
+
+/* Define los estilos iniciales del elemento antes de la animación */
+.fadeInLeft {
+    opacity: 0;
+    /* Inicialmente el elemento estará invisible */
+    transform: translateX(-100px);
+    /* También puedes ajustar la propiedad 'translateY' para cambiar la dirección de la animación */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Establece la duración y el efecto de la transición */
+}
+
+.fadeInRight {
+    opacity: 0;
+    /* Inicialmente el elemento estará invisible */
+    transform: translateX(100px);
+    /* También puedes ajustar la propiedad 'translateY' para cambiar la dirección de la animación */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Cuando el elemento tenga la clase 'fadeIn' y 'active', aplicará estos estilos animados */
+.active {
+    opacity: 1;
+    /* El elemento se volverá visible */
+    transform: translateY(0);
+    /* El elemento volverá a su posición original */
+}
+
+.animado {
+    opacity: 0;
+    transition: all .5s;
+}
+
+
+.mostrarArriba {
+    animation: mostrarArriba 1s;
+}
+
+@keyframes mostrarArriba {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ------------------------------------------    Sección  RESPONSIVA --------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+
+    /* Barra de navegación */
+    .navb .hambur {
+        display: block;
+    }
+
+    .navb ol {
+        display: none;
+    }
+
+    
+    .navb .hambur {
+        margin-left: auto;
+        position: relative;
+        right: 1rem;
+    }
+    
+    .panel {
+        position: sticky;
+        top: 3rem;
+        z-index: 998;
+        width: 100%;
+        font-family: var(--neue-font);
+        font-size: .9rem;
+        background-color: rgb(0, 0, 0);
+        display: none;
+        transition: transform 0.3s ease, opacity 0.3 ease;
+        /* De arriba (X-Y)*/
+        transform: translate(0, -100%);
+        /* De abajo
+        transform: translate(0, 100%);
+        De derecha
+        transform: translate(100%, 0);
+        Dei izquierda
+        transform: translate(-100%, 0); */
+    }
+    
+    .panel.is-active{
+        transform: translate(0, 0);
+        display: block;
+    }
+    
+    /* características para colocar el botón en la esquina inferior derecha */
+    .panel-btn{
+        z-index: 999;
+        margin-left: auto;
+        position: relative;
+        right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .panel ol {
+        margin: 0;
+    }
+
+    .panel ol > * {
+        margin-right: 1rem!important;
+    }
+
+    .panel ol:first-child {
+        padding-top: 1rem!important;
+    }
+
+    /* Sección Intercambios */
+
+    .intercambios-hero-image {
+        width: 100%;
+    }
+
+    /* Entrevistas */
+
+    .entrevistas {
+        width: 95%;
+    }
+
+    .tarjeta-entrevista {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tarjeta-entrevista .foto-entrevista,
+    .descripcion-entrevista {
+        flex-basis: 100%;
+    }
+
+    .foto-entrevista {
+        margin-bottom: .5rem;
+    }
+
+    .foto-entrevista .capa {
+        height: 0;
+    }
+    
+    .foto-entrevista img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .descripcion-entrevistado {
+        font-size: .8rem;
+    }
+
+    /* Videos */
+    .hero-cortos {
+        width: 100%;
+    }
+
+    .tarjeta-galeria {
+        background-color: rgb(0, 0, 0);
+        width: 95%;
+    }
+
+    .tarjeta-entrevista:hover {
+        transform: none;
+        transition: none;
+    }
+
+    .material-galeria {
+        padding-bottom: 70%;
+    }
+
+    .descripcion-galeria {
+        font-size: .7rem;
+    }
+
+
+    /* Formulario */
+
+    .formulario {
+        height: auto;
+        width: 100%;
+    }
+
+    .contenedor-form {
+        height: auto;
+        margin: 1rem 0;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .fila1 {
+        flex-direction: column;
+    }
+
+    .fila1 .nombre {
+        margin-bottom: 1rem;
+    }
+
+}
