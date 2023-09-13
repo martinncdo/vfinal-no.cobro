@@ -76,7 +76,7 @@ const d = document,
                         method: "POST",
                         body: new FormData(e.target)
                     },
-                    res = await fetch("https://formsubmit.co/ajax/ca3d64ec31dd5a263771855b0870f3f8", data);
+                    res = await fetch("https://formsubmit.co/ajax/nocobroaudiovisual@gmail.com", data);
                     console.log(res.json())
                     $loader.classList.add("none");
                     $response.classList.remove("none");
