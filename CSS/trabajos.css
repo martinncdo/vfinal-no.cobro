@@ -368,10 +368,12 @@ li {
 
 
 .contact-form-loader {
+    margin-top: 1rem;
     text-align: center!important;
 }
 
 .contact-form-response {
+    margin-top: 1rem;
     text-align: center;
     display: block;
 }
