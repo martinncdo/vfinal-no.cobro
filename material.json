@@ -1,0 +1,98 @@
+{
+    "entrevistas": [
+        {
+            "titulo": "Entrevista a Yaisa Montes",
+            "fecha": "10 de noviembre de 2023 · Entrevista",
+            "descripcion": "En esta ocasión entrevistamos a Yaisa Montes, quien nos habló sobre su música, sus referentes y lo que busca transmitir en cada una de sus canciones.",
+            "nombre": "Yaisa",
+            "redes": ["instagram", "youtube"],
+            "linkredes": ["https://www.instagram.com/yaisa.montes/", "https://www.youtube.com/channel/UC78J98qmCVjk4a-eDzR99nA"],
+            "srcimagen": "./img/entrevistayaisa.png",
+            "altimagen": "Foto de la entrevista. Se ve a Yaisa respondiendo a las preguntas realizadas.",
+            "linkentrevista": "https://www.youtube.com/watch?v=u3zbLm4zH1U"
+        },
+        {
+            "titulo": "Entrevista a Sebastián Escalante",
+            "fecha": "20 de abril de 2023 · Entrevista",
+            "descripcion": "Con Intercambios buscamos contar historias. Esta vez traemos un relato en primera persona de un cura de la iglesia católica. Nos cuenta su historia y responde a incógnitas que rodean a toda la iglesia en el mundo.",
+            "nombre": "Sebastián",
+            "redes": ["facebook"],
+            "linkredes": ["https://www.facebook.com/sebastian.escalante1?mibextid=ZbWKwL"],
+            "srcimagen": "./img/entrevistacura.webp",
+            "altimagen": "Foto de la entrevista. Se ve al cura Sebastián Escalante en medio de la charla. Lleva puesta su indumentaria eclesiástica, y se encuentra dentro de su iglesia.",
+            "linkentrevista": "https://www.youtube.com/watch?v=37Dd374KzhI&t=512s"
+        },
+        {
+            "titulo": "Entrevista a Daynine",
+            "fecha": "24 de febrero de 2023 · Entrevista",
+            "descripcion": "En esta oportunidad tuvimos el placer de charlar con Dai y Nina. Un dúo de música urbana de la cuidad de Posadas, Misiones. Hablamos de sus inicios y cómo ven la escena local, entre otras cosas.",
+            "nombre": "Daynine",
+            "redes": ["instagram", "youtube"],
+            "linkredes": ["https://www.instagram.com/daynine_d9/", "https://www.youtube.com/channel/UCsCJsfXIGnE5DB84e755r2A"],
+            "srcimagen": "./img/entrevistadaynine.webp",
+            "altimagen": "Foto de la entrevista. Se ve al dúo Daynine en medio de la charla, sentadas en una mesa.",
+            "linkentrevista": "https://www.youtube.com/watch?v=dJTqr5_k10o&t=328s"
+        },
+        {
+            "titulo": "Entrevista a Joumy",
+            "fecha": "21 de febrero de 2023 · Entrevista",
+            "descripcion": "Hoy en Intercambios presentamos la historia de Joumy, un artista oriundo de Candelaria Misiones nos contó cómo fue sus inicios allá por el año 2018 entre muchas cosas más.",
+            "nombre": "Joumy",
+            "redes": ["instagram", "youtube"],
+            "linkredes": ["https://www.instagram.com/joumy_oficial/", "https://www.youtube.com/channel/UCxGdub0ZGMTw5xvJhjpcMSg"],
+            "srcimagen": "./img/entrevistakaoz.webp",
+            "altimagen": "Foto de Joumy durante la entrevista, se encuentra en un parque y lleva puesto unas gafas oscuras.",
+            "linkentrevista": "https://www.youtube.com/watch?v=kYE_pnrSXig&t=9s"
+        },
+        {
+            "titulo": "Entrevista a Kaoz",
+            "fecha": "28 de enero de 2023 · Entrevista",
+            "descripcion": "Hoy en Intercambios presentamos la historia de Kaoz, un artista posadeño que lleva más de 5 años en la música. Kaoz al igual que muchos artistas locales reproduce la cultura y cuenta la realidad de los misioneros.",
+            "nombre": "Kaoz",
+            "redes": ["instagram", "youtube"],
+            "linkredes": ["https://www.instagram.com/kaozmusic_/", "https://www.youtube.com/channel/UChY5dXr_DAiDl-HZVU1jPhw"],
+            "srcimagen": "./img/entrevistajoumy.webp",
+            "altimagen": "Foto de Kaoz durante la entrevista, al igual que Joumy se encuentra en un parque y lleva puesto unas gafas de sol.",
+            "linkentrevista": "https://www.youtube.com/watch?v=cxTPcprbUFc&t=290s"
+        },
+        {
+            "titulo": "Entrevista a Micol Ortas",
+            "fecha": "21 de diciembre de 2022 · Entrevista",
+            "descripcion": "Micol Ortas es una cantante misionera que desde muy niña estuvo ligada a la música. Pero la mejores historias cuentan con reveces en la vida que interrumpen los sueños, escuchemos sobre sus ideas y sus éxitos.",
+            "nombre": "Micol",
+            "redes": ["spotify", "instagram", "youtube"],
+            "linkredes": ["https://open.spotify.com/intl-es/artist/1EQtmC7nGMBVzzLwRfKgCX?si=o1ynLmLZSZKLO3TO7uYpfQ&utm_source=copy-link&nd=1&dlsi=54048e7bea7a42ff", "https://www.instagram.com/micol.ortas/", "https://www.youtube.com/@micolortas"],
+            "srcimagen": "./img/entrevistamicol.webp",
+            "altimagen": "Foto de Micol durante la entrevista. Se encuentra en un estudio de música.",
+            "linkentrevista": "https://www.youtube.com/watch?v=M7N-Fov1YrM"
+        },
+        {
+            "titulo": "Entrevista a Iveo",
+            "fecha": "7 de diciembre de 2022 · Entrevista",
+            "descripcion": "Iveo es un artista urbano que a través de su música cuenta su historia y su forma de ver el mundo. Con esta entrevista nos cuenta su biografía, cómo comenzó en la música y sus expectativas de crecimiento.",
+            "nombre": "Iveo",
+            "redes": ["spotify", "instagram", "youtube"],
+            "linkredes": ["https://open.spotify.com/intl-es/artist/5t7xdLy5kEcoydgLvFBXNF?si=KQPls97iRD6wpZgoFc-6TQ&nd=1&dlsi=09ccaf5fc5514086", "https://www.instagram.com/iveoo_/", "https://www.youtube.com/channel/UCLgMFkMBfwORPTE8i28CJuQ"],
+            "srcimagen": "./img/entrevistaiveo.webp",
+            "altimagen": "Foto de Iveo durante la entrevista. Se encuentra al aire libre y lleva unas gafas oscuras.",
+            "linkentrevista": "https://www.youtube.com/watch?v=YqyLRDdHW4Y"
+        }       
+    ],
+    "videos": [
+        {
+            "srciframe": "https://www.youtube.com/embed/zqkWPIQPYIw?si=9VT0bqsejvlboOVM",
+            "linkredsocial": "https://www.instagram.com/corchazo.oficial/?igshid=NzZhOTFlYzFmZQ%3D%3D",
+            "usuarioredsocial": "@corchazo.oficial"
+        },
+        {
+            "srciframe": "https://www.youtube.com/embed/hFlfOv9tCbg?si=WxhQAa2wcjyp2bKG",
+            "linkredsocial": "https://www.instagram.com/waluca.custom/",
+            "usuarioredsocial": "@waluca_custom"
+        },
+        {
+            "srciframe": "https://player.vimeo.com/video/864091673?h=f2f3a5bfdb",
+            "linkredsocial": "https://www.instagram.com/encuentros_stunt_posadas_/",
+            "usuarioredsocial": "@encuentros_stunt_posadas_"
+        }
+    ]
+}

@@ -88,35 +88,28 @@
   </div>
   
   <!-- Galería -->
-
   <div class="contenedor-margin d-flex flex-column justify-content-center align-items-center" id="material">
-    <div class="tarjeta-galeria d-flex flex-column primer-tarjeta">
+    
+  </div>
+    <!-- <div class="tarjeta-galeria d-flex flex-column margin-tarjeta">
       <div class="material-galeria">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/zqkWPIQPYIw?si=9VT0bqsejvlboOVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="descripcion-galeria">
-        Video producido para <a href="https://www.instagram.com/corchazo.oficial/?igshid=NzZhOTFlYzFmZQ%3D%3D" target="_blank" class="link-galeria"><b>@corchazo.oficial</b></a>
-  
-      </div>
-    </div>
-    <div class="tarjeta-galeria d-flex flex-column ultima-tarjeta">
-      <div class="material-galeria">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hFlfOv9tCbg?si=WxhQAa2wcjyp2bKG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="descripcion-galeria">
-        Video producido para <a href="https://www.instagram.com/waluca.custom/" target="_blank" class="link-galeria"><b>@waluca_custom</b></a>
-      </div>
-    </div>
-    <div class="tarjeta-galeria d-flex flex-column ultima-tarjeta">
-      <div class="material-galeria">
-        <iframe src="https://player.vimeo.com/video/864091673?h=f2f3a5bfdb" width="640" height="1138" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <p><a href="https://vimeo.com/864091673"></a> <a href="https://vimeo.com/user207567096"></a> <a href="https://vimeo.com"></a></p>
+        <iframe src="https://player.vimeo.com/video/864091673?h=f2f3a5bfdb" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="descripcion-galeria">Reel producido para <a href="https://www.instagram.com/encuentros_stunt_posadas_/" target="_blank" class="link-galeria"><b>@encuentros_stunt_posadas_</b></a>
+      </div>
+    </div> -->
 
+  <template class="template-galeria">
+    <div class="tarjeta-galeria d-flex flex-column margin-tarjeta">
+      <div class="material-galeria">
+        <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="descripcion-galeria">
+        Video producido para <a target="_blank" class="link-galeria"><b class="usuario-red-social"></b></a>
       </div>
     </div>
-  </div>
+  </template>
+  <!-- Fin Galería -->
   
   <!-- SECCIÓN INTERCAMBIOS -->
   <div class="contenedor-margin">
@@ -146,250 +139,37 @@
   <!-- INICIO  ENTREVISTAS DE INTERCAMBIOS -->
   <div class="contenedor-margin">
     <section id="entrevistas" class="entrevistas">
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistayaisa.png" alt="Foto de la entrevista. Se ve al cura Sebastián Escalante en medio de la charla.
-          Lleva puesta su indumentaria eclesiástica, y se encuentra dentro de su iglesia.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Yaisa Montes</h2>
-          <p class="detalles">10 de noviembre 2023 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            En esta ocasión entrevistamos a Yaisa Montes, quien nos habló sobre su música, sus referentes y lo que busca transmitir
-            en cada una de sus canciones.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Yaisa</p>
-              <ol class="d-flex">
-                <a href="https://www.instagram.com/yaisa.montes/" target="_blank">
-                  <il><i class="bi bi-instagram"></i></il>
-                </a>
-                <a href="https://www.youtube.com/channel/UC78J98qmCVjk4a-eDzR99nA" target="_blank">
-                  <il><i class="bi bi-youtube"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=u3zbLm4zH1U" class="link-yt" target="_blank">
-              Ver entrevista completa en YouTube
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistacura.webp" alt="Foto de la entrevista. Se ve al cura Sebastián Escalante en medio de la charla.
-          Lleva puesta su indumentaria eclesiástica, y se encuentra dentro de su iglesia.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Sebastián Escalante</h2>
-          <p class="detalles">20 de abril 2023 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            Con Intercambios buscamos contar historias. Esta vez traemos un relato en primera persona de un cura
-            de la iglesia católica. Nos cuenta su historia y responde a incógnitas que
-            rodean a toda la iglesia en el mundo.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Sebastián</p>
-              <ol class="d-flex">
-                <a href="https://www.facebook.com/sebastian.escalante1?mibextid=ZbWKwL" target="_blank">
-                  <il><i class="bi bi-facebook"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=37Dd374KzhI&t=512s" class="link-yt" target="_blank">
-              Ver entrevista completa en YouTube
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistadaynine.webp" alt="Foto de la entrevista. Se ve al dúo Daynine en medio de la charla, sentadas
-          en una mesa.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Daynine</h2>
-          <p class="detalles">24 de febrero 2023 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            En esta oportunidad tuvimos el placer de charlar con Dai y Nina. Un dúo de música urbana de la
-            cuidad de Posadas, Misiones. Hablamos de sus inicios y cómo ven la escena local, entre otras cosas.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Daynine</p>
-              <ol class="d-flex">
-                <a href="https://www.instagram.com/daynine_d9/" target="_blank">
-                  <il><i class="bi bi-instagram"></i></il>
-                </a>
-                <a href="https://www.youtube.com/channel/UCsCJsfXIGnE5DB84e755r2A" target="_blank">
-                  <il><i class="bi bi-youtube"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=dJTqr5_k10o&t=328s" target="_blank" class="link-yt">Ver entrevista
-              completa en YouTube</a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistajoumy.webp" alt="Foto de Joumy durante la entrevista, se encuentra en un parque
-          y lleva puesto unas gafas oscuras.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Joumy</h2>
-          <p class="detalles">21 de febrero 2023 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            Hoy en Intercambios presentamos la historia de Joumy, un artista oriundo de Candelaria Misiones nos contó
-            cómo fue sus inicios allá por el año 2018 entre muchas cosas más.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Joumy</p>
-              <ol class="d-flex">
-                <a href="https://www.instagram.com/joumy_oficial/" target="_blank">
-                  <il><i class="bi bi-instagram"></i></il>
-                </a>
-                <a href="https://www.youtube.com/channel/UCxGdub0ZGMTw5xvJhjpcMSg" target="_blank">
-                  <il><i class="bi bi-youtube"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=kYE_pnrSXig&t=9s" target="_blank" class="link-yt">Ver entrevista
-              completa en YouTube</a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista ">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistakaoz.webp" alt="Foto de Kaoz durante la entrevista, al igual que Joumy se encuentra en un 
-          parque y lleva puesto unas gafas de sol.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Kaoz</h2>
-          <p class="detalles">28 de enero 2023 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            Hoy en Intercambios presentamos la historia de Kaoz, un artista posadeño que lleva más de 5 años en la
-            música. Kaoz al igual que muchos artistas locales reproduce la cultura y cuenta la realidad de los
-            misioneros.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Kaoz</p>
-              <ol class="d-flex">
-                <a href="https://www.instagram.com/kaozmusic_/" target="_blank">
-                  <il><i class="bi bi-instagram"></i></il>
-                </a>
-                <a href="https://www.youtube.com/channel/UChY5dXr_DAiDl-HZVU1jPhw" target="_blank">
-                  <il><i class="bi bi-youtube"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=cxTPcprbUFc&t=290s" class="link-yt" target="_blank">Ver entrevista
-              completa en YouTube</a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista ">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistamicol.webp" alt="Foto de Micol durante la entrevista. Se encuentra en un estudio de música.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Micol Ortas</h2>
-          <p class="detalles">21 de diciembre 2022 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            Micol Ortas es una cantante misionera que desde muy niña estuvo ligada a la música. Pero la mejores
-            historias cuentan con reveces en la vida que interrumpen los sueños, escuchemos
-            sobre sus ideas y sus éxitos.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Micol</p>
-              <ol class="d-flex">
-                <a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0lodGwzVmZFcXlENzJDaFYtTW5tOXJJLWxNQXxBQ3Jtc0tsem1QVThBTDY3SVRZTkVDbjNlU0lrdTJOYXdmaTF1VnUzQVZ3U3lLejV5Q1VWeE1PWWc1aWxiNWNVQUxKUkN0UlNFMlQ0aUdGanZkekwxMGU0bUZ5Wkh3T01ZdElWLUVLYzJhZVptU0h3ejhFVElPOA&q=https%3A%2F%2Fopen.spotify.com%2Fartist%2F1EQtmC7nGMBVzzLwRfKgCX%3Fsi%3Do1ynLmLZSZKLO3TO7uYpfQ%26utm_source%3Dcopy-link&v=M7N-Fov1YrM"
-                  target="_blank">
-                  <il><i class="bi bi-spotify"></i></il>
-                </a>
-                <a href="https://www.instagram.com/micol.ortas/" target="_blank">
-                  <il><i class="bi bi-instagram"></i></il>
-                </a>
-                <a href="https://www.youtube.com/@micolortas" target="_blank">
-                  <il><i class="bi bi-youtube"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=M7N-Fov1YrM" class="link-yt" target="_blank">Ver entrevista
-              completa en YouTube</a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
-      <!-- Inicio tarjeta -->
-      <div class="tarjeta-entrevista mb-5">
-        <div class="foto-entrevista">
-          <img src="./img/entrevistaiveo.webp" alt="Foto de Iveo durante la entrevista. Se encuentra al aire libre
-          y lleva unas gafas oscuras.">
-        </div>
-        <div class="descripcion-entrevista">
-          <h2 class="titulo-entrevista">Entrevista a Iveo</h2>
-          <p class="detalles">7 de diciembre 2022 · Entrevista</p>
-          <hr>
-          <p class="descripcion-entrevistado">
-            Iveo es un artista urbano que a través de su música cuenta su historia y su forma de ver el mundo. Con esta
-            entrevista nos cuenta su biografía, cómo comenzó en la música y sus expectativas de crecimiento.
-          </p>
-
-          <div class="redes-entrevista d-flex">
-            <div class="redes d-flex flex-column">
-              <p>Redes de Iveo</p>
-              <ol class="d-flex">
-                <a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVJKa1J3cXRfRU1leUVMa3ZxVGhLQU9XMW1Cd3xBQ3Jtc0ttdDZOV2Itdmt5dlFTWW5HSmlNd0h2c2pIWGJFTi1Tc1IxOUYyRkQ5RVRrQkRPZEpETXVmMm9Icmo4OWxDUkRZQV94c0ktRjlPR3VzMGhvdzUtUW9PUTV4eEpfN2ZFbC1IYUZVb1BnMkFLeE5pYVVRWQ&q=https%3A%2F%2Fopen.spotify.com%2Fartist%2F5t7xdLy5kEcoydgLvFBXNF%3Fsi%3DKQPls97iRD6wpZgoFc-6TQ&v=YqyLRDdHW4Y"
-                  target="_blank">
-                  <il><i class="bi bi-spotify"></i></il>
-                </a>
-                <a href="https://www.instagram.com/iveoo_/" target="_blank">
-                  <il><i class="bi bi-instagram"></i></il>
-                </a>
-                <a href="https://www.youtube.com/channel/UCLgMFkMBfwORPTE8i28CJuQ" target="_blank">
-                  <il><i class="bi bi-youtube"></i></il>
-                </a>
-              </ol>
-            </div>
-            <a href="https://www.youtube.com/watch?v=YqyLRDdHW4Y" target="_blank" class="link-yt">Ver entrevista
-              completa en YouTube</a>
-          </div>
-        </div>
-      </div>
-      <!-- Fin tarjeta -->
+      
     </section>
   </div>
-
   <!-- FIN SECCIÓN INTERCAMBIOS -->
+
+  <template class="template-entrevista">
+    <!-- Inicio tarjeta -->
+ <div class="tarjeta-entrevista">
+   <div class="foto-entrevista">
+     <img class="img-entrevista">
+   </div>
+   <div class="descripcion-entrevista">
+     <h2 class="titulo-entrevista"></h2>
+     <p class="detalles"></p>
+     <hr>
+     <p class="descripcion-entrevistado"></p>
+     <div class="redes-entrevista d-flex">
+       <div class="redes d-flex flex-column">
+         <p class="titulo-redes"></p>
+         <ol class="d-flex lista-redes">
+  
+         </ol>
+       </div>
+       <a class="link-yt" target="_blank">
+         Ver entrevista completa en YouTube
+       </a>
+     </div>
+   </div>
+ </div>
+ <!-- Fin tarjeta -->
+</template>
   
   <!-- Footer -->
   <footer class="footer d-fex flex-column text-white pb-4 pt-3">

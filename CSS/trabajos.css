@@ -309,12 +309,8 @@ li {
     width: 50%;
 }
 
-.primer-tarjeta {
-    margin-top: 5rem!important;
-}
-
-.ultima-tarjeta {
-    margin-bottom: 5rem!important;
+.margin-tarjeta {
+    margin: 2.5rem 0!important;
 }
 
 .tarjeta-galeria video,
