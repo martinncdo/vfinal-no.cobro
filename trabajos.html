@@ -6,9 +6,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EG4CEZQH0J"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-EG4CEZQH0J');
   </script>
   <meta charset="UTF-8">
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <!-- menu hamburguesa -->
+  <!-- Menú hamburguesa -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="stylesheet" href="CSS/trabajos.css">
 </head>
@@ -68,9 +68,9 @@
     </ol>
   </nav>
   <!-- Fin barra de navegación -->
-  
+
   <!-- MULTIMEDIA -->
-  
+
   <div class="contenedor-margin">
     <section class="hero-cortos d-flex justify-content-center align-items-center" id="videos">
       <div class="presentacion d-flex justify-content-center align-items-center flex-column">
@@ -80,29 +80,22 @@
             <span>Videos</span>
           </div>
         </div>
-        <p>Realizamos <b>videos/cortometrajes</b> sobre diversas temáticas para todos los 
+        <p>Realizamos <b>videos/cortometrajes</b> sobre diversas temáticas para todos los
           formatos que desees (YouTube, TikTok, Instagram, desktop, mobile, etc.).</p>
-        <!-- <a href="#material" class="btn-entrevistas">Ver material</a> -->
       </div>
     </section>
   </div>
-  
+  <!-- FIN HERO IMAGE DE MULTIMEDIA -->
+
   <!-- Galería -->
-  <div class="contenedor-margin d-flex flex-column justify-content-center align-items-center" id="material">
-    
-  </div>
-    <!-- <div class="tarjeta-galeria d-flex flex-column margin-tarjeta">
-      <div class="material-galeria">
-        <iframe src="https://player.vimeo.com/video/864091673?h=f2f3a5bfdb" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="descripcion-galeria">Reel producido para <a href="https://www.instagram.com/encuentros_stunt_posadas_/" target="_blank" class="link-galeria"><b>@encuentros_stunt_posadas_</b></a>
-      </div>
-    </div> -->
+  <div class="contenedor-margin d-flex flex-column justify-content-center align-items-center" id="material"></div>
 
   <template class="template-galeria">
     <div class="tarjeta-galeria d-flex flex-column margin-tarjeta">
       <div class="material-galeria">
-        <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
       <div class="descripcion-galeria">
         Video producido para <a target="_blank" class="link-galeria"><b class="usuario-red-social"></b></a>
@@ -110,15 +103,19 @@
     </div>
   </template>
   <!-- Fin Galería -->
-  
+
   <!-- SECCIÓN INTERCAMBIOS -->
   <div class="contenedor-margin">
     <section id="entrevistas" class="intercambios-hero-image d-flex justify-content-center align-items-center">
       <!-- Barra -->
       <div class="barra-opciones fadeInLeft d-flex justify-content-center align-items-center mt-1">
         <ol class="secciones mt-1 mb-1 d-flex justify-content-center align-items-center">
-          <a href="#videos"><li class="me-4">Videos</li></a>
-          <a href="#entrevistas"><li class="me-4">Entrevistas</li></a>
+          <a href="#videos">
+            <li class="me-4">Videos</li>
+          </a>
+          <a href="#entrevistas">
+            <li class="me-4">Entrevistas</li>
+          </a>
         </ol>
       </div>
       <!-- FinBarra -->
@@ -130,47 +127,48 @@
           </div>
         </div>
         <p>Intercambios es una sección de <b>entrevistas</b> donde tenemos charlas fructíferas.</p>
-        <!-- <a href="#entrevistas" class="btn-entrevistas">Ver entrevistas</a> -->
       </div>
 
     </section>
   </div>
-  <!-- FIN MULTIMEDIA -->
+  <!-- FIN HERO IMAGE DE INTERCAMBIOS -->
+
   <!-- INICIO  ENTREVISTAS DE INTERCAMBIOS -->
   <div class="contenedor-margin">
     <section id="entrevistas" class="entrevistas">
-      
+
     </section>
   </div>
-  <!-- FIN SECCIÓN INTERCAMBIOS -->
 
   <template class="template-entrevista">
     <!-- Inicio tarjeta -->
- <div class="tarjeta-entrevista">
-   <div class="foto-entrevista">
-     <img class="img-entrevista">
-   </div>
-   <div class="descripcion-entrevista">
-     <h2 class="titulo-entrevista"></h2>
-     <p class="detalles"></p>
-     <hr>
-     <p class="descripcion-entrevistado"></p>
-     <div class="redes-entrevista d-flex">
-       <div class="redes d-flex flex-column">
-         <p class="titulo-redes"></p>
-         <ol class="d-flex lista-redes">
-  
-         </ol>
-       </div>
-       <a class="link-yt" target="_blank">
-         Ver entrevista completa en YouTube
-       </a>
-     </div>
-   </div>
- </div>
- <!-- Fin tarjeta -->
-</template>
-  
+    <div class="tarjeta-entrevista">
+      <div class="foto-entrevista">
+        <img class="img-entrevista">
+      </div>
+      <div class="descripcion-entrevista">
+        <h2 class="titulo-entrevista"></h2>
+        <p class="detalles"></p>
+        <hr>
+        <p class="descripcion-entrevistado"></p>
+        <div class="redes-entrevista d-flex">
+          <div class="redes d-flex flex-column">
+            <p class="titulo-redes"></p>
+            <ol class="d-flex lista-redes">
+
+            </ol>
+          </div>
+          <a class="link-yt" target="_blank">
+            Ver entrevista completa en YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Fin tarjeta -->
+  </template>
+  <!-- FIN SECCIÓN INTERCAMBIOS -->
+
+
   <!-- Footer -->
   <footer class="footer d-fex flex-column text-white pb-4 pt-3">
     <div class="datos-contacto d-flex justify-content-center">
@@ -179,7 +177,8 @@
     </div>
     <div class="redes-sociales d-flex mt-2">
       <div class="redes">
-        <a href="https://wa.me/+5493764888073?text=%20%20%20%20%20%20" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://wa.me/+5493764888073?text=%20%20%20%20%20%20" target="_blank"><i
+            class="bi bi-whatsapp"></i></a>
         <a href="https://www.instagram.com/no.cobro/" target="_blank"><i class="bi bi-instagram"></i></a>
         <a href="https://www.youtube.com/@NOCOBRO" target="_blank"><i class="bi bi-youtube"></i></a>
       </div>
