@@ -1,5 +1,3 @@
-import { ENDPOINT_SERVER } from "./env.js";
-
 let animado = document.querySelectorAll(".animado");
 
 function mostrarScroll() {
