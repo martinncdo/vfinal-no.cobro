@@ -92,7 +92,7 @@ d.addEventListener("submit", async (e) => {
     if (e.target.matches(".form-signin")) {
         console.log("yesss")
         try {
-            let res = await fetch(`${window.env.ENDPOINT_SERVER}/signIn`, {
+            let res = await fetch(`https://crud-nocobro.onrender.com/signIn`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -125,7 +125,7 @@ const $fragment = d.createDocumentFragment(),
     $templateEntrevista = d.querySelector(".template-entrevista").content;
 
 async function cargarEntrevistas() {
-    let res = await fetch(`${window.env.ENDPOINT_SERVER}/entrevistas`);
+    let res = await fetch(`https://crud-nocobro.onrender.com/entrevistas`);
     let json = await res.json();
     console.log(json);
     Object.keys(json).forEach(elem => {  
@@ -170,7 +170,7 @@ const $seccionGaleria = d.querySelector("#material"),
 
 async function cargarVideos() {
     try {
-        let res = await fetch(`${window.env.ENDPOINT_SERVER}/videos`);
+        let res = await fetch(`https://crud-nocobro.onrender.com/videos`);
         let json = await res.json();
         Object.keys(json).forEach(elem => {  
             console.log(json[elem]) 
@@ -190,7 +190,7 @@ async function cargarVideos() {
 d.addEventListener("DOMContentLoaded", cargarVideos);
 
 async function getDb() {
-    let res = await fetch(`${window.env.ENDPOINT_SERVER}/displayDhb`, {
+    let res = await fetch(`https://crud-nocobro.onrender.com/displayDhb`, {
         method: "POST",
         credentials: "include"
     });
