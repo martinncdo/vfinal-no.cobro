@@ -699,7 +699,7 @@ form::placeholder {
         margin-bottom: 1rem;
     }
 
-    .tarjeta-entrevista > iframe {
-        width: 100%;
+    .foto-entrevista > iframe {
+        width: 250px !important;
     }
 }
