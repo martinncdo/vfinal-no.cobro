@@ -31,7 +31,7 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('load', () => {
-    texto = document.getElementById("fuente");
+    let texto = document.getElementById("fuente");
     setTimeout(() => {
         texto.classList.add("titulo-efecto");
     }, 500);
