@@ -1,3 +1,5 @@
+import { ENDPOINT_SERVER } from "./env.js";
+
 let animado = document.querySelectorAll(".animado");
 
 function mostrarScroll() {
@@ -13,22 +15,20 @@ function mostrarScroll() {
 
 window.addEventListener('scroll', mostrarScroll);
 
-// En tu archivo JavaScript
 window.addEventListener('load', function () {
-    // Cuando se cargue la página, obtén todos los elementos con la clase 'fadeIn'
     const elementosLeft = document.querySelectorAll('.fadeInLeft');
     const elementosRight = document.querySelectorAll('.fadeInRight')
 
     elementosRight.forEach(function (elementoRight, index) {
         setTimeout(function () {
             elementoRight.classList.add('active');
-        }, index * 100); // Agrega un pequeño retraso entre cada animación para que parezca más natural
+        }, index * 100); 
     });
-    // Agrega la clase 'active' a cada elemento después de un breve momento para iniciar la animación
+
     elementosLeft.forEach(function (elementoLeft, index) {
         setTimeout(function () {
             elementoLeft.classList.add('active');
-        }, index * 100); // Agrega un pequeño retraso entre cada animación para que parezca más natural
+        }, index * 100); 
     });
 });
 
@@ -90,6 +90,33 @@ d.addEventListener("submit", async (e) => {
             $form.insertAdjacentElement("afterend", `<p style= "text-align: center;">${err.status}: ${err.msg}</p>`);
         }
     }
+
+    if (e.target.matches(".form-signin")) {
+        console.log("yesss")
+        try {
+            let res = await fetch(`${ENDPOINT_SERVER}/signIn`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                credentials: "include",
+                body: JSON.stringify({
+                    user: e.target.user.value,
+                    password: e.target.password.value
+                })
+            });
+            let json = await res.json();
+            console.log(json.status);
+            if (json.status == 200) {
+                setTimeout(() => {
+                    getDb();
+                }, 1500);
+            }
+        } catch (error) {
+
+        };
+    }
+
 }
 );
 
@@ -100,38 +127,41 @@ const $fragment = d.createDocumentFragment(),
     $templateEntrevista = d.querySelector(".template-entrevista").content;
 
 async function cargarEntrevistas() {
-    try {
-        let res = await fetch("material.json"),
-            json = await res.json(),
-            entrevistas = await json["entrevistas"];
-        entrevistas.forEach(entr => {
-            $templateEntrevista.querySelector(".img-entrevista").src = entr.srcimagen;
-            $templateEntrevista.querySelector(".img-entrevista").alt = entr.altimagen;
-            $templateEntrevista.querySelector(".titulo-entrevista").textContent = entr.titulo;
-            $templateEntrevista.querySelector(".detalles").textContent = entr.fecha;
-            $templateEntrevista.querySelector(".descripcion-entrevistado").textContent = entr.descripcion;
-            $templateEntrevista.querySelector(".link-yt").href = entr.linkentrevista;
-            $templateEntrevista.querySelector(".titulo-redes").textContent = `Redes de ${entr.nombre}`;
+    let res = await fetch(`${ENDPOINT_SERVER}/entrevistas`);
+    let json = await res.json();
+    console.log(json);
+    Object.keys(json).forEach(elem => {  
+        console.log(json[elem]) 
+        let link_with_embed = json[elem].link_entrevista.replace("watch?v=", "embed/");
+        var expresionRegular = /=.*?s/;
+        let new_link = link_with_embed.replace(expresionRegular, '');
+        
+        new_link = new_link.split('&')[0];
+        
+        $templateEntrevista.querySelector("iframe").src = new_link;
+    
+       $templateEntrevista.querySelector("iframe").src = new_link;
+       $templateEntrevista.querySelector(".titulo-entrevista").textContent = json[elem].titulo;
+       $templateEntrevista.querySelector(".detalles").textContent = json[elem].fecha;
+       $templateEntrevista.querySelector(".descripcion-entrevistado").textContent = json[elem].descripcion;
+       $templateEntrevista.querySelector(".link-yt").href = json[elem].link_entrevista;
+       $templateEntrevista.querySelector(".titulo-redes").textContent = `Redes de ${json[elem].nombre_artista}`;
 
-            let $listaRedes = $templateEntrevista.querySelector(".lista-redes"),
-                listado = "";
+       let $listaRedes = $templateEntrevista.querySelector(".lista-redes"),
+           listado = "";
 
-            for (let index = 0; index < entr.redes.length; index++) {
-                console.log(entr.redes[index]);
-                listado += `<a href="${entr.linkredes[index]}" target="_blank">
-                    <li><i class="bi bi-${entr.redes[index]}"></i></li>
-                    </a>`;
-            };
+       for (let index = 0; index < json[elem].redes.length; index++) {
+           listado += `<a href="${json[elem].link_redes[index]}" target="_blank">
+               <li><i class="bi bi-${json[elem].redes[index]}"></i></li>
+               </a>`;
+       };
 
-            $listaRedes.innerHTML = listado;
-            let $clone = d.importNode($templateEntrevista, true);
-            $fragment.appendChild($clone);
-        });
-        $seccionEntrevistas.appendChild($fragment);
-    } catch(err) {
-        console.log(err);
-    }
-}
+       $listaRedes.innerHTML = listado;
+       let $clone = d.importNode($templateEntrevista, true);
+       $fragment.appendChild($clone);
+   });
+   $seccionEntrevistas.appendChild($fragment);
+};
 
 d.addEventListener("DOMContentLoaded", cargarEntrevistas);
 
@@ -142,14 +172,13 @@ const $seccionGaleria = d.querySelector("#material"),
 
 async function cargarVideos() {
     try {
-        let res = await fetch("material.json"),
-            json = await res.json(),
-            videos = await json["videos"];
-        console.log(videos);
-        videos.forEach(video => {
-            $templateVideo.querySelector("iframe").src = video.srciframe;
-            $templateVideo.querySelector(".link-galeria").href = video.linkredsocial;
-            $templateVideo.querySelector(".usuario-red-social").textContent = video.usuarioredsocial;
+        let res = await fetch(`${ENDPOINT_SERVER}/videos`);
+        let json = await res.json();
+        Object.keys(json).forEach(elem => {  
+            console.log(json[elem]) 
+            $templateVideo.querySelector("iframe").src = json[elem].link_video;
+            $templateVideo.querySelector(".link-galeria").href = json[elem].link_instagram;
+            $templateVideo.querySelector(".usuario-red-social").textContent = json[elem].usuario_instagram;
     
             let $clone = d.importNode($templateVideo, true);
             $fragment.appendChild($clone);
@@ -157,7 +186,31 @@ async function cargarVideos() {
         $seccionGaleria.appendChild($fragment);
     }catch(err) {
         console.log(err);
-    }
+    };
 };
 
 d.addEventListener("DOMContentLoaded", cargarVideos);
+
+async function getDb() {
+    let res = await fetch(`${ENDPOINT_SERVER}/displayDhb`, {
+        method: "POST",
+        credentials: "include"
+    });
+    let json = await res.json();
+    console.log(json);
+    document.body.innerHTML = await json.html;
+    addScriptTag(json.js, json.css);
+}
+
+function addScriptTag(contentJs, contentCss) {
+    let script_tag = document.createElement('script');
+    script_tag.type = 'text/javascript';
+    script_tag.text = contentJs;
+    document.body.appendChild(script_tag);
+    let style_tag = document.createElement('style');
+    style_tag.textContent = contentCss;
+    document.body.appendChild(style_tag);
+};
+
+
+
