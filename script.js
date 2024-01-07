@@ -125,36 +125,34 @@ const $fragment = d.createDocumentFragment(),
     $templateEntrevista = d.querySelector(".template-entrevista").content;
 
 async function cargarEntrevistas() {
-    let res = await fetch(`https://crud-nocobro.onrender.com/entrevistas`);
+    let res = await fetch("material.json");
     let json = await res.json();
-    console.log(json);
-    Object.keys(json).forEach(elem => {  
-        console.log(json[elem]) 
-        let link_with_embed = json[elem].link_entrevista.replace("watch?v=", "embed/");
-        var expresionRegular = /=.*?s/;
-        let new_link = link_with_embed.replace(expresionRegular, '');
+    Object.keys(json.entrevistas).forEach(elem => {  
+         let link_with_embed = json.entrevistas[elem].linkentrevista.replace("watch?v=", "embed/");
+         var expresionRegular = /=.*?s/;
+         let new_link = link_with_embed.replace(expresionRegular, '');
         
-        new_link = new_link.split('&')[0];
+         new_link = new_link.split('&')[0];
         
-        $templateEntrevista.querySelector("iframe").src = new_link;
+         $templateEntrevista.querySelector("iframe").src = new_link;
     
-       $templateEntrevista.querySelector("iframe").src = new_link;
-       $templateEntrevista.querySelector(".titulo-entrevista").textContent = json[elem].titulo;
-       $templateEntrevista.querySelector(".detalles").textContent = json[elem].fecha;
-       $templateEntrevista.querySelector(".descripcion-entrevistado").textContent = json[elem].descripcion;
-       $templateEntrevista.querySelector(".link-yt").href = json[elem].link_entrevista;
-       $templateEntrevista.querySelector(".titulo-redes").textContent = `Redes de ${json[elem].nombre_artista}`;
+        $templateEntrevista.querySelector("iframe").src = new_link;
+        $templateEntrevista.querySelector(".titulo-entrevista").textContent = json.entrevistas[elem].titulo;
+        $templateEntrevista.querySelector(".detalles").textContent = json.entrevistas[elem].fecha;
+        $templateEntrevista.querySelector(".descripcion-entrevistado").textContent = json.entrevistas[elem].descripcion;
+        $templateEntrevista.querySelector(".link-yt").href = json.entrevistas[elem].linkentrevista.split('&')[0];
+        $templateEntrevista.querySelector(".titulo-redes").textContent = `Redes de ${json.entrevistas[elem].nombre}`;
 
-       let $listaRedes = $templateEntrevista.querySelector(".lista-redes"),
-           listado = "";
+        let $listaRedes = $templateEntrevista.querySelector(".lista-redes"),
+            listado = "";
 
-       for (let index = 0; index < json[elem].redes.length; index++) {
-           listado += `<a href="${json[elem].link_redes[index]}" target="_blank">
-               <li><i class="bi bi-${json[elem].redes[index]}"></i></li>
-               </a>`;
-       };
+        for (let index = 0; index < json.entrevistas[elem].redes.length; index++) {
+            listado += `<a href="${json.entrevistas[elem].linkredes[index]}" target="_blank">
+                <li><i class="bi bi-${json.entrevistas[elem].redes[index]}"></i></li>
+                </a>`;
+        };
 
-       $listaRedes.innerHTML = listado;
+        $listaRedes.innerHTML = listado;
        let $clone = d.importNode($templateEntrevista, true);
        $fragment.appendChild($clone);
    });
@@ -168,47 +166,23 @@ d.addEventListener("DOMContentLoaded", cargarEntrevistas);
 const $seccionGaleria = d.querySelector("#material"),
     $templateVideo = d.querySelector(".template-galeria").content;
 
-async function cargarVideos() {
-    try {
-        let res = await fetch(`https://crud-nocobro.onrender.com/videos`);
-        let json = await res.json();
-        Object.keys(json).forEach(elem => {  
-            console.log(json[elem]) 
-            $templateVideo.querySelector("iframe").src = json[elem].link_video;
-            $templateVideo.querySelector(".link-galeria").href = json[elem].link_instagram;
-            $templateVideo.querySelector(".usuario-red-social").textContent = json[elem].usuario_instagram;
+ async function cargarVideos() {
+     try {
+         let res = await fetch("material.json");
+         let json = await res.json();
+         Object.keys(json.videos).forEach(elem => {  
+             console.log(json.videos[elem]) 
+             $templateVideo.querySelector("iframe").src = json.videos[elem].srciframe;
+             $templateVideo.querySelector(".link-galeria").href = json.videos[elem].linkredsocial;
+             $templateVideo.querySelector(".usuario-red-social").textContent = json.videos[elem].usuarioredsocial;
     
-            let $clone = d.importNode($templateVideo, true);
-            $fragment.appendChild($clone);
-        });
-        $seccionGaleria.appendChild($fragment);
-    }catch(err) {
-        console.log(err);
-    };
-};
+             let $clone = d.importNode($templateVideo, true);
+             $fragment.appendChild($clone);
+         });
+         $seccionGaleria.appendChild($fragment);
+     }catch(err) {
+         console.log(err);
+     };
+ };
 
-d.addEventListener("DOMContentLoaded", cargarVideos);
-
-async function getDb() {
-    let res = await fetch(`https://crud-nocobro.onrender.com/displayDhb`, {
-        method: "POST",
-        credentials: "include"
-    });
-    let json = await res.json();
-    console.log(json);
-    document.body.innerHTML = await json.html;
-    addScriptTag(json.js, json.css);
-}
-
-function addScriptTag(contentJs, contentCss) {
-    let script_tag = document.createElement('script');
-    script_tag.type = 'text/javascript';
-    script_tag.text = contentJs;
-    document.body.appendChild(script_tag);
-    let style_tag = document.createElement('style');
-    style_tag.textContent = contentCss;
-    document.body.appendChild(style_tag);
-};
-
-
-
+ d.addEventListener("DOMContentLoaded", cargarVideos);
