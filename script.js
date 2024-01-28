@@ -37,6 +37,7 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
+
 //función navbar responsive
 
 function hamburgerMenu(panelBtn, panel, menuLink) {

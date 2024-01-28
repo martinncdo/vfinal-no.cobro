@@ -1,3 +1,11 @@
+html {
+    background-color: #000;
+}
+
+body {
+    background-color: #000;
+}
+
 .footer,.navb ol {
     font-family:var(--neue-font)
 }
@@ -50,7 +58,7 @@ p {
 .capa-inicio {
     width:100%;
     height:100vh;
-    background-color:rgba(0,0,0,.25)
+    background-color:rgba(0, 0, 0);
 }
 a {
     color:#fff
@@ -121,11 +129,12 @@ ol>* {
 }
 #inicio .capa {
     width:100%;
-    height:100%
+    height:100%;
+    background-color: #0000008c;
 }
 .column2 {
     flex-direction:column;
-    background-image:url(../img/fogata.webp);
+    background-image:url(../img/cuervo.webp);
     width:100%;
     justify-content:center;
     align-items:center
@@ -472,8 +481,13 @@ ol>* {
         margin-right:.2rem;
         margin-bottom:0
     }
+
+    .container-servicios .multimedia {
+        height: 40vh;
+    }
+
     .container-servicios .servicio3 {
-        flex:0 0 100%;
+        flex: 0 0 100%;
         margin-bottom:4rem
     }
     .multimedia .titulo {
