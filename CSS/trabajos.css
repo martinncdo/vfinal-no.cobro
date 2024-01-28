@@ -40,7 +40,7 @@ a {
 
 .navb {
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     background-color: rgb(0, 0, 0);
     position: sticky;
     top: 0;
@@ -60,6 +60,7 @@ a {
 
 .panel {
     display: none;
+    transition: all 4s ease-out;
 }
 
 .navb ol {
@@ -109,7 +110,7 @@ p {
 
 .barra-opciones {
     position: fixed;
-    top: 3rem;
+    top: 4rem;
     z-index: 10;
     color: white;
     font-family: var(--neue-font);
@@ -564,16 +565,18 @@ form::placeholder {
     
     .panel {
         position: sticky;
-        top: 3rem;
+        top: 4rem;
         z-index: 998;
         width: 100%;
         font-family: var(--neue-font);
         font-size: .9rem;
         background-color: rgb(0, 0, 0);
         display: none;
-        transition: transform 0.3s ease, opacity 0.3 ease;
+        height: 100vh;
+        transition: all .5s ease-out;
         /* De arriba (X-Y)*/
         transform: translate(0, -100%);
+        display: none;
         /* De abajo
         transform: translate(0, 100%);
         De derecha
