@@ -610,6 +610,7 @@ form::placeholder {
 
     .panel ol > * {
         margin-right: 1rem!important;
+        font-size: 15px;
     }
 
     .panel ol:first-child {

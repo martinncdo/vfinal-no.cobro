@@ -414,6 +414,11 @@ ol>* {
     .panel ol {
         margin:0
     }
+
+    .panel ol > * {
+        font-size: 15px;
+    }
+
     ol:first-child {
         padding-top:1rem
     }
